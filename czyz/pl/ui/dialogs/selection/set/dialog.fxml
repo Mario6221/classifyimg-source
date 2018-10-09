@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="czyz.pl.ui.dialogs.selection.set.DialogController">
+   <items>
+      <VBox>
+         <children>
+            <FlowPane minWidth="-Infinity" prefHeight="24.0" prefWidth="266.0" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="newSet" mnemonicParsing="false" text="New" />
+                  <Label fx:id="chosenSetLabel" text="Chosen set: ">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Label>
+               </children>
+            </FlowPane>
+            <ListView fx:id="optionsLV" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="226.0" prefWidth="266.0">
+         <children>
+            <FlowPane minWidth="-Infinity" prefHeight="26.0" prefWidth="271.0" VBox.vgrow="NEVER">
+               <children>
+                  <ComboBox fx:id="tagBox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="177.0" promptText="Pick a tag" />
+                  <Button fx:id="addTagButton" mnemonicParsing="false" text="Add" />
+                  <Button fx:id="newTagButton" mnemonicParsing="false" text="New" />
+               </children>
+            </FlowPane>
+            <ListView fx:id="radioButtons" prefHeight="200.0" prefWidth="227.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
